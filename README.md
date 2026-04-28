@@ -27,6 +27,8 @@ Heritage Market is an online marketplace dedicated to traditional Arab handicraf
 ---
 
 ## 📁 Project Structure
+
+```
 heritage-market/
 ├── index.html # Homepage
 ├── products.html # Product listing with search & favorites
@@ -38,7 +40,9 @@ heritage-market/
 ├── db.json # Database: 5 promotions + 3 reviews (used with json-server)
 └── README.md # This file
 
+``` 
 
+---
 
 
 
