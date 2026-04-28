@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="تواصل مع سوق التراث - نرحب باستفساراتكم واقتراحاتكم">
+  <title>اتصل بنا | سوق التراث</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕌</text></svg>">
+
+  <style>
+    
+    .contact-icon i {
+        font-size: 1.25rem;
+        color: #b18b5e; 
+    }
+    .social-link {
+        transition: transform 0.2s ease;
+        text-decoration: none;
+    }
+    .social-link:hover {
+        transform: translateY(-3px);
+    }
+    .fa-x-twitter { color: #000; }
+    .fa-instagram { color: #E4405F; }
+    .fa-youtube { color: #FF0000; }
+    .fa-snapchat { 
+        color: #FFFC00; 
+        text-shadow: 0px 0px 1px rgba(0,0,0,0.5); 
+    }
+    .fa-whatsapp { color: #25D366; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon"><i class="fa-solid fa-mosque"></i></span>
+        سوق التراث
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"> الرئيسية</a></li>
+        <li><a href="products.html"> المنتجات</a></li>
+        <li><a href="about.html"> من نحن</a></li>
+        <li><a href="contact.html" class="active"> اتصل بنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="dark-toggle" id="darkToggle"><i class="fa-solid fa-moon"></i> ليلي</button>
+        <button class="nav-hamburger" id="navHamburger" aria-label="القائمة">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="breadcrumb">
+      <a href="index.html">الرئيسية</a>
+      <span>/</span>
+      <span>اتصل بنا</span>
+    </div>
+    <h1><i class="fa-solid fa-headset" style="margin-left: 10px;"></i> اتصل بنا</h1>
+    <p>نحن هنا لمساعدتك! تواصل معنا وسنرد عليك في أقرب وقت ممكن</p>
+  </section>
+
+  <section class="section">
+    <div class="contact-grid">
+      <div class="animate-on-scroll">
+        <h2 style="margin-bottom: 1.5rem;">أرسل لنا رسالة</h2>
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="contactName" class="form-label">الاسم</label>
+            <input type="text" id="contactName" class="form-input" placeholder="أدخل اسمك الكامل">
+            <div class="error-msg"> الاسم مطلوب</div>
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail" class="form-label">البريد الإلكتروني</label>
+            <input type="email" id="contactEmail" class="form-input" placeholder="example@email.com">
+            <div class="error-msg"> البريد الإلكتروني مطلوب</div>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage" class="form-label">الرسالة</label>
+            <textarea id="contactMessage" class="form-textarea" placeholder="اكتب رسالتك هنا..." rows="5"></textarea>
+            <div class="error-msg"> الرسالة مطلوبة</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content: center; gap: 10px;">
+             <i class="fa-solid fa-paper-plane"></i> إرسال الرسالة
+          </button>
+
+          <div id="contactSuccess" class="success-msg">
+             تم إرسال رسالتك بنجاح! سنتواصل معك خلال ٢٤ ساعة عمل.
+          </div>
+        </form>
+      </div>
+
+      <div class="animate-on-scroll">
+        <h2 style="margin-bottom: 1.5rem;">معلومات التواصل</h2>
+        
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <h3 style="font-size: 1rem; margin-bottom: 0.25rem;">العنوان</h3>
+            <p style="font-size: 0.92rem;">شارع الملك فهد، حي العليا، الرياض ١٢٢١١، المملكة العربية السعودية</p>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <h3 style="font-size: 1rem; margin-bottom: 0.25rem;">الهاتف</h3>
+            <p style="font-size: 0.92rem;">٩٦٦٥٠١٢٣٤٥٦٧+</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">السبت - الخميس: ٩ صباحاً - ٩ مساءً</p>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <h3 style="font-size: 1rem; margin-bottom: 0.25rem;">البريد الإلكتروني</h3>
+            <p style="font-size: 0.92rem;">info@souqaltaraph.com</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">نرد خلال ٢٤ ساعة عمل</p>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <div>
+            <h3 style="font-size: 1rem; margin-bottom: 0.25rem;">واتساب</h3>
+            <p style="font-size: 0.92rem;">٩٦٦٥٠١٢٣٤٥٦٧+</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">متاح على مدار الساعة</p>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fa-solid fa-share-nodes"></i></div>
+          <div>
+            <h3 style="font-size: 1rem; margin-bottom: 0.25rem;">تابعنا</h3>
+            <div style="display: flex; gap: 1.25rem; margin-top: 0.5rem; align-items: center;">
+              <a href="#" class="social-link" title="تويتر">
+                <i class="fa-brands fa-x-twitter" style="font-size: 1.5rem;"></i>
+              </a>
+              <a href="#" class="social-link" title="انستقرام">
+                <i class="fa-brands fa-instagram" style="font-size: 1.5rem;"></i>
+              </a>
+              <a href="#" class="social-link" title="يوتيوب">
+                <i class="fa-brands fa-youtube" style="font-size: 1.5rem;"></i>
+              </a>
+              <a href="#" class="social-link" title="سناب شات">
+                <i class="fa-brands fa-snapchat" style="font-size: 1.5rem;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; border-radius: var(--radius-md); overflow: hidden; height: 250px; background: var(--bg-secondary); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.5rem;">
+          <i class="fa-solid fa-map-location-dot" style="font-size: 3rem; color: #ccc;"></i>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">خريطة الموقع - الرياض، حي العليا</p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-blue btn-sm" style="margin-top: 0.5rem; gap: 8px;">
+            فتح في خرائط جوجل <i class="fa-solid fa-up-right-from-square" style="font-size: 0.8rem;"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="section" style="padding-top:3rem;padding-bottom:3rem;">
+      <div class="section-header animate-on-scroll">
+        <h2><i class="fa-solid fa-circle-question" style="margin-left: 10px; color: var(--primary-color);"></i> الأسئلة الشائعة</h2>
+        <p>إجابات على أكثر الأسئلة شيوعاً</p>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="contact-info-card animate-on-scroll" style="cursor:pointer;" onclick="toggleFaq(this)">
+          <div>
+            <h3 style="font-size: 1rem;">ما هي مدة التوصيل؟</h3>
+            <p class="faq-answer" style="display:none; font-size: 0.92rem; margin-top: 0.5rem;">نقوم بتوصيل الطلبات داخل الرياض خلال يومين عمل، وللمدن الأخرى خلال ٣-٥ أيام عمل. الشحن مجاني للطلبات فوق ٢٠٠ ريال.</p>
+          </div>
+        </div>
+        <div class="contact-info-card animate-on-scroll" style="cursor:pointer;" onclick="toggleFaq(this)">
+            <div>
+              <h3 style="font-size: 1rem;">هل يمكنني إرجاع المنتج؟</h3>
+              <p class="faq-answer" style="display:none; font-size: 0.92rem; margin-top: 0.5rem;">نعم، يمكنك إرجاع أي منتج خلال ١٤ يوماً من تاريخ الاستلام بشرط أن يكون في حالته الأصلية.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3><i class="fa-solid fa-mosque"></i> سوق التراث</h3>
+        <p style="margin-bottom: 1rem;">متجرك الإلكتروني الأول للمنتجات التراثية العربية الأصيلة. نحافظ على تراثنا ونقدمه بأحدث الوسائل.</p>
+      </div>
+      <div>
+        <h3>روابط سريعة</h3>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
+          <li><a href="products.html"><i class="fa-solid fa-bag-shopping"></i> المنتجات</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-phone"></i> اتصل بنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>تواصل معنا</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:info@souqaltaraph.com"><i class="fa-solid fa-envelope"></i> info@souqaltaraph.com</a></li>
+          <li><a href="tel:+966501234567"><i class="fa-solid fa-phone"></i> ٩٦٦٥٠١٢٣٤٥٦٧+</a></li>
+          <li><a href="#"><i class="fa-solid fa-clock"></i> السبت - الخميس: ٩ ص - ٩ م</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© ٢٠٢٤ سوق التراث. جميع الحقوق محفوظة. صُنع بكل <i class="fa-solid fa-heart" style="color: red;"></i> في المملكة العربية السعودية</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script>
+    function toggleFaq(element) {
+        const answer = element.querySelector('.faq-answer');
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="تصفح مجموعة منتجاتنا التراثية العربية الأصيلة - حرف يدوية، عطور، تحف، وأكثر">
+  <title>المنتجات | سوق التراث</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕌</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon"><i class="fa-solid fa-mosque"></i></span>
+        سوق التراث
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"> الرئيسية</a></li>
+        <li><a href="products.html" class="active"> المنتجات</a></li>
+        <li><a href="about.html"> من نحن</a></li>
+        <li><a href="contact.html"> اتصل بنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="dark-toggle" id="darkToggle">🌙 ليلي</button>
+        <button class="nav-hamburger" id="navHamburger" aria-label="القائمة">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="breadcrumb">
+      <a href="index.html">الرئيسية</a>
+      <span>/</span>
+      <span>المنتجات</span>
+    </div>
+    <h1> منتجاتنا التراثية</h1>
+    <p>اكتشف مجموعة واسعة من المنتجات التراثية العربية الأصيلة، المصنوعة بأيدي حرفيين ماهرين من مختلف أنحاء العالم العربي</p>
+  </section>
+
+  <!-- Static Products Table -->
+  <section class="section">
+    <div class="section-header animate-on-scroll">
+      <h2>جدول المنتجات المتوفرة</h2>
+      <p>قائمة بأبرز المنتجات التراثية المتوفرة في متجرنا</p>
+    </div>
+
+    <div class="table-container animate-on-scroll">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>المنتج</th>
+            <th>الوصف</th>
+            <th>السعر</th>
+            <th>التوفر</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> سيف دمشقي أصيل</td>
+            <td>سيف تقليدي من الفولاذ الدمشقي بنقوش فريدة</td>
+            <td>١٢٠٠ ر.س</td>
+            <td style="color: #148F77; font-weight:600;">متوفر </td>
+          </tr>
+          <tr>
+            <td> مبخرة نحاسية</td>
+            <td>مبخرة نحاسية مطروقة يدوياً بزخارف إسلامية</td>
+            <td>١٨٥ ر.س</td>
+            <td style="color: #148F77; font-weight:600;">متوفر </td>
+          </tr>
+          <tr>
+            <td> عطر العود الملكي</td>
+            <td>عطر فاخر من العود الكمبودي والورد الطائفي</td>
+            <td>٤٥٠ ر.س</td>
+            <td style="color: #148F77; font-weight:600;">متوفر </td>
+          </tr>
+          <tr>
+            <td> طقم شاي عربي</td>
+            <td>طقم شاي نحاسي كامل مع أكواب وصينية خشبية</td>
+            <td>٣٢٠ ر.س</td>
+            <td style="color: #D4A853; font-weight:600;">آخر قطع </td>
+          </tr>
+          <tr>
+            <td> فانوس رمضاني</td>
+            <td>فانوس نحاسي بزجاج ملون للديكور الرمضاني</td>
+            <td>٩٥ ر.س</td>
+            <td style="color: #148F77; font-weight:600;">متوفر </td>
+          </tr>
+          <tr>
+            <td> حلي فضة يمنية</td>
+            <td>طقم مجوهرات فضة مطعمة بالعقيق اليماني</td>
+            <td>٧٨٠ ر.س</td>
+            <td style="color: #c0392b; font-weight:600;">نفد  </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Products from JSON -->
+  <section class="section-alt">
+    <div class="section" style="padding-top:3rem;padding-bottom:3rem;">
+      <div class="section-header animate-on-scroll">
+        <h2>جميع المنتجات</h2>
+        <p>بيانات محملة من ملف المنتجات - أكثر من ١٢ منتجاً تراثياً فريداً</p>
+      </div>
+
+      <!-- Search & Filter -->
+      <div class="search-filter-bar animate-on-scroll">
+        <input type="text" id="searchInput" class="search-input" placeholder=" ابحث عن منتج...">
+        <div class="filter-btns">
+          <button class="filter-btn active" data-category="الكل">الكل</button>
+          <button class="filter-btn" data-category="تحف">تحف</button>
+          <button class="filter-btn" data-category="عطور">عطور</button>
+          <button class="filter-btn" data-category="بخور">بخور</button>
+          <button class="filter-btn" data-category="أواني">أواني</button>
+          <button class="filter-btn" data-category="ملابس">ملابس</button>
+          <button class="filter-btn" data-category="ديكور">ديكور</button>
+          <button class="filter-btn" data-category="قهوة">قهوة</button>
+        </div>
+      </div>
+
+      <!-- Products Grid (loaded from products.json) -->
+      <div id="productsContainer" class="products-grid"></div>
+    </div>
+  </section>
+
+  <!-- Special Offers from API (GET from db.json) -->
+  <section class="section">
+    <div class="section-header animate-on-scroll">
+      <h2> العروض الخاصة</h2>
+      <p>عروض وخصومات حصرية محملة من قاعدة البيانات</p>
+    </div>
+    <div id="offersContainer" class="offers-grid"></div>
+  </section>
+
+  <!-- Customer Reviews from API -->
+  <section class="section-alt">
+    <div class="section" style="padding-top:3rem;padding-bottom:3rem;">
+      <div class="section-header animate-on-scroll">
+        <h2> آراء العملاء</h2>
+        <p>ماذا يقول عملاؤنا الكرام عن تجربتهم مع سوق التراث</p>
+      </div>
+      <div id="reviewsContainer" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3><i class="fa-solid fa-mosque"></i> سوق التراث</h3>
+        <p style="margin-bottom: 1rem;">متجرك الإلكتروني الأول للمنتجات التراثية العربية الأصيلة. نحافظ على تراثنا ونقدمه بأحدث الوسائل.</p>
+      </div>
+      <div>
+        <h3>روابط سريعة</h3>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
+          <li><a href="products.html"><i class="fa-solid fa-bag-shopping"></i> المنتجات</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-phone"></i> اتصل بنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>تواصل معنا</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:info@souqaltaraph.com"><i class="fa-solid fa-envelope"></i> info@souqaltaraph.com</a></li>
+          <li><a href="tel:+966501234567"><i class="fa-solid fa-phone"></i> ٩٦٦٥٠١٢٣٤٥٦٧+</a></li>
+          <li><a href="#"><i class="fa-solid fa-clock"></i> السبت - الخميس: ٩ ص - ٩ م</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© ٢٠٢٤ سوق التراث. جميع الحقوق محفوظة. صُنع بكل <i class="fa-solid fa-heart" style="color: red;"></i> في المملكة العربية السعودية</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script>
+    function toggleFaq(element) {
+        const answer = element.querySelector('.faq-answer');
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

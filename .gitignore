@@ -1,0 +1,82 @@
+# ============================================
+# Python + Jupyter .gitignore
+# Data Science Course Project
+# ============================================
+
+# Virtual Environment
+venv/
+env/
+.venv/
+ENV/
+
+# Python Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyc
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Distribution / Packaging
+dist/
+build/
+*.egg-info/
+*.egg
+.eggs/
+
+# IDE Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Data Files (uncomment if needed)
+# *.csv
+# *.xlsx
+# *.json
+# !package.json
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Cache
+.cache/
+*.cache
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+# React / Frontend
+node_modules/
+dist/
+.next/
+out/
+coverage/
+
+# Build caches
+.parcel-cache/
+.eslintcache

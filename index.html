@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="سوق التراث - متجرك الإلكتروني للمنتجات التراثية العربية الأصيلة من الحرف اليدوية والعطور والتحف الثمينة">
+  
+  <title>سوق التراث | متجر المنتجات التراثية العربية</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕌</text></svg>">
+</head>
+<body>
+
+  <nav class="navbar" aria-label="القائمة الرئيسية">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon"><i class="fa-solid fa-mosque"></i></span>
+        سوق التراث
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">الرئيسية</a></li>
+        <li><a href="products.html">المنتجات</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="dark-toggle" id="darkToggle" aria-label="تبديل الوضع الليلي">🌙 ليلي</button>
+        <button class="nav-hamburger" id="navHamburger" aria-label="فتح القائمة">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>سوق التراث</h1>
+      <p class="hero-subtitle">رحلة عبر عبق التاريخ وروعة الحضارة العربية</p>
+      <p class="hero-desc">
+        اكتشف مجموعة فريدة من المنتجات التراثية العربية الأصيلة، من الحرف اليدوية والتحف النادرة إلى أجود أنواع العطور والبخور. كل قطعة تحكي قصة من تاريخنا العريق.
+      </p>
+      <div class="hero-buttons">
+        <a href="products.html" class="btn btn-primary">تصفح المنتجات</a>
+        <a href="about.html" class="btn btn-secondary">اكتشف قصتنا</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header" style="padding: 3rem 1.5rem;">
+    <div class="stats-grid" style="max-width: 1000px; margin: 0 auto;">
+      <div class="stat-card">
+        <span class="stat-number">+٥٠٠</span>
+        <span class="stat-label">منتج تراثي</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">+١٠٠٠</span>
+        <span class="stat-label">عميل سعيد</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">+٥٠</span>
+        <span class="stat-label">حرفي ماهر</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">١٥</span>
+        <span class="stat-label">سنة خبرة</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header animate-on-scroll">
+      <h2>مرحباً بكم في سوق التراث</h2>
+      <p>وجهتكم الأولى للمنتجات التراثية العربية الأصيلة</p>
+    </div>
+
+    <div class="contact-grid animate-on-scroll">
+      <div class="about-text">
+        <p style="margin-bottom: 1.5rem;">
+          نحن في سوق التراث نؤمن بأن كل منتج تراثي يحمل في طياته قصة حضارية فريدة وتراثاً ثقافياً غنياً. منذ تأسيسنا عام ٢٠٠٩، نسعى لجمع أرقى المنتجات الحرفية العربية من مختلف أنحاء العالم العربي.
+        </p>
+        <p style="margin-bottom: 1.5rem;">
+          يعمل معنا أكثر من خمسين حرفياً ماهراً يصنعون بأيديهم الذهبية تحفاً لا مثيل لها. نحن لا نبيع منتجات فحسب، بل نحافظ على تراث عريق مهدد بالاندثار.
+        </p>
+        <div style="display:flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="products.html" class="btn btn-blue btn-sm">تصفح المنتجات ←</a>
+          <a href="https://www.arabic-traditions.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">زيارة موقع الشريك</a>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div class="img-container" style="height: 220px;">
+          <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=400&h=300&fit=crop" alt="مسجد تاريخي بعمارة إسلامية" onerror="this.src='https://picsum.photos/seed/mosque1/400/300'">
+        </div>
+        <div class="img-container" style="height: 220px;">
+          <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=400&h=300&fit=crop" alt="كثبان رملية ذهبية" onerror="this.src='https://picsum.photos/seed/desert1/400/300'">
+        </div>
+        <div class="img-container" style="height: 220px; grid-column: 1 / -1;">
+          <img src="https://images.unsplash.com/photo-1545041797-0a19db8c0267?w=400&h=250&fit=crop" alt="فسيفساء وزخارف إسلامية" onerror="this.src='https://picsum.photos/seed/tiles1/500/250'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="section" style="padding-top:3rem; padding-bottom:3rem;">
+      <div class="section-header animate-on-scroll">
+        <h2>لماذا سوق التراث؟</h2>
+        <p>نتميز بتقديم تجربة تسوق فريدة تجمع بين الأصالة والجودة</p>
+      </div>
+      <div class="stats-grid">
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon">🏆</div>
+          <h3>جودة مضمونة</h3>
+          <p style="font-size:0.9rem;">جميع منتجاتنا أصلية ومضمونة من أفضل الحرفيين العرب</p>
+        </div>
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon">🚚</div>
+          <h3>شحن سريع</h3>
+          <p style="font-size:0.9rem;">نوصل لجميع مناطق المملكة خلال ٢-٥ أيام عمل</p>
+        </div>
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon">💝</div>
+          <h3>تغليف فاخر</h3>
+          <p style="font-size:0.9rem;">تغليف أنيق مناسب للإهداء مع إمكانية إضافة بطاقة شخصية</p>
+        </div>
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon">🔄</div>
+          <h3>إرجاع سهل</h3>
+          <p style="font-size:0.9rem;">سياسة إرجاع مرنة خلال ١٤ يوماً من تاريخ الاستلام</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header animate-on-scroll">
+      <h2>منتجات مميزة</h2>
+      <p>مختارات من أرقى المنتجات التراثية العربية</p>
+    </div>
+    <div id="featuredProducts" class="products-grid"></div>
+    <div style="text-align:center; margin-top: 2rem;" class="animate-on-scroll">
+      <a href="products.html" class="btn btn-primary">عرض جميع المنتجات</a>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="section" style="padding-top:3rem; padding-bottom:3rem;">
+      <div class="section-header animate-on-scroll">
+        <h2>اكتشف منتجاً جديداً</h2>
+        <p>اضغط على الزر لتحصل على اقتراح منتج عشوائي من مجموعتنا</p>
+      </div>
+      <div style="text-align:center;" class="animate-on-scroll">
+        <button id="randomProductBtn" class="btn btn-primary" style="font-size:1.1rem; padding: 1rem 2.5rem;">
+           اعرض منتج عشوائي
+        </button>
+      </div>
+      <div id="randomProductDisplay" class="random-product-display"></div>
+    </div>
+  </section>
+
+  <section class="page-header" style="padding: 4rem 1.5rem;">
+    <div style="max-width: 700px; margin: 0 auto;" class="animate-on-scroll">
+      <h2 style="color: #FFFFFF; margin-bottom: 1rem;">انضم إلى عائلة سوق التراث</h2>
+      <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem; font-size: 1.1rem;">
+        اشترك في نشرتنا البريدية واحصل على خصم ١٥٪ على طلبك الأول مع استلام أحدث العروض والمنتجات الجديدة
+      </p>
+      <a href="contact.html" class="btn btn-secondary" style="background: #1a1a2e; color: #D4A853;">
+        تواصل معنا الآن 
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>سوق التراث</h3>
+        <p style="margin-bottom: 1rem;">متجرك الإلكتروني الأول للمنتجات التراثية العربية الأصيلة. نحافظ على تراثنا ونقدمه بأحدث الوسائل.</p>
+        <p>تأسس عام ٢٠٠٩ في الرياض، المملكة العربية السعودية</p>
+      </div>
+      <div class="footer-nav">
+        <h3>روابط سريعة</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="products.html">المنتجات</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </div>
+      <div class="footer-service">
+        <h3>خدمة العملاء</h3>
+        <ul class="footer-links">
+          <li><a href="#">سياسة الإرجاع</a></li>
+          <li><a href="#">الشحن والتوصيل</a></li>
+          <li><a href="#">الأسئلة الشائعة</a></li>
+          <li><a href="#">سياسة الخصوصية</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>تواصل معنا</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:info@souqaltaraph.com">📧 info@souqaltaraph.com</a></li>
+          <li><a href="tel:+966501234567">📞 ٩٦٦٥٠١٢٣٤٥٦٧+</a></li>
+          <li><a href="#">📍 الرياض، المملكة العربية السعودية</a></li>
+          <li><a href="#">⏰ السبت - الخميس: ٩ ص - ٩ م</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© ٢٠٢٤ سوق التراث. جميع الحقوق محفوظة. صُنع بكل الحب في المملكة العربية السعودية</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
