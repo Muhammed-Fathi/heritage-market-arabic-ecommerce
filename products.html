@@ -111,7 +111,7 @@
     <div class="section" style="padding-top:3rem;padding-bottom:3rem;">
       <div class="section-header animate-on-scroll">
         <h2>جميع المنتجات</h2>
-        <p>بيانات محملة من ملف المنتجات - أكثر من ١٢ منتجاً تراثياً فريداً</p>
+        <p> أكثر من ١٢ منتجاً تراثياً فريداً</p>
       </div>
 
       <!-- Search & Filter -->
@@ -129,16 +129,16 @@
         </div>
       </div>
 
-      <!-- Products Grid (loaded from products.json) -->
+      <!-- Products Grid -->
       <div id="productsContainer" class="products-grid"></div>
     </div>
   </section>
 
-  <!-- Special Offers from API (GET from db.json) -->
+  <!-- Special Offers from API -->
   <section class="section">
     <div class="section-header animate-on-scroll">
       <h2> العروض الخاصة</h2>
-      <p>عروض وخصومات حصرية محملة من قاعدة البيانات</p>
+      <p>عروض وخصومات حصرية محملة </p>
     </div>
     <div id="offersContainer" class="offers-grid"></div>
   </section>
@@ -185,12 +185,6 @@
 
   <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><i class="fa-solid fa-arrow-up"></i></button>
 
-  <script>
-    function toggleFaq(element) {
-        const answer = element.querySelector('.faq-answer');
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
   <script src="script.js"></script>
 </body>
 </html>

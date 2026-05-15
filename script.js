@@ -21,20 +21,24 @@ const MockAPI = {
     }
   },
 
-  async post(endpoint, newData) {
-    try {
-      let data = await this.get(endpoint);
-      if (!data) return null;
-      const key = Object.keys(data)[0];
-      newData.id = data[key].length > 0 ? Math.max(...data[key].map(item => item.id)) + 1 : 1;
-      data[key].push(newData);
-      localStorage.setItem('mockApi_' + endpoint, JSON.stringify(data));
-      return newData;
-    } catch (error) {
-      console.error('API POST Error:', error);
-      return null;
-    }
+  async post(endpoint, newData, collection) {
+  try {
+    let data = await this.get(endpoint);
+    if (!data || !data[collection]) return null;
+
+    newData.id = data[collection].length > 0 
+      ? Math.max(...data[collection].map(item => item.id)) + 1 
+      : 1;
+
+    data[collection].push(newData);
+
+    localStorage.setItem('mockApi_' + endpoint, JSON.stringify(data));
+    return newData;
+  } catch (error) {
+    console.error('API POST Error:', error);
+    return null;
   }
+}
 };
 
 // ===== Toast Notification =====
@@ -151,10 +155,10 @@ function toggleFavorite(productId) {
   const index = favorites.indexOf(productId);
   if (index > -1) {
     favorites.splice(index, 1);
-    showToast('تم إزالة المنتج من المفضلة ❤️‍🩹');
+    showToast('تم إزالة المنتج من المفضلة ');
   } else {
     favorites.push(productId);
-    showToast('تم إضافة المنتج إلى المفضلة ❤️');
+    showToast('تم إضافة المنتج إلى المفضلة ');
   }
   localStorage.setItem('favorites', JSON.stringify(favorites));
   updateFavButtons();
@@ -368,7 +372,7 @@ function initReviewForm() {
       date: dateStr
     };
 
-    const result = await MockAPI.post('db.json', newReview);
+    const result = await MockAPI.post('db.json', newReview,'reviews');
 
     if (result) {
       showToast('تم إضافة مراجعتك بنجاح! شكراً لك 🌟');
@@ -385,7 +389,7 @@ function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const nameInput = document.getElementById('contactName');
@@ -428,14 +432,20 @@ function initContactForm() {
       clearFieldError(messageInput);
     }
 
-    if (valid) {
-      const successMsg = document.getElementById('contactSuccess');
-      if (successMsg) {
-        successMsg.classList.add('show');
-        setTimeout(() => successMsg.classList.remove('show'), 5000);
-      }
+    const newMessage = {
+      name: nameInput.value.trim(),
+      email: emailInput.value.trim(),
+      message: messageInput.value.trim(),
+      date: new Date().toISOString()
+    };
+
+    const result = await MockAPI.post('db.json', newMessage, 'messages');
+
+    if (result) {
       showToast('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً 📩');
       form.reset();
+    } else {
+      showToast('حدث خطأ أثناء الإرسال', 'error');
     }
   });
 
